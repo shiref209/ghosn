@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import "./App.css";
+import Home from "./Pages/Home/Home";
+import { CacheProvider } from "@emotion/react";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./theme";
+import { CssBaseline, Box } from "@mui/material";
+import { cacheRtl } from "./Helpers/Cache/cache";
+import { Outlet } from "react-router-dom";
+import Layout from "./Components/Layout/Layout";
+import AppRoutes from "./AppRoutes/AppRoutes";
+function Root() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Box dir="rtl">
+          <AppRoutes />
+        </Box>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
 
-export default App;
+export default Root;
