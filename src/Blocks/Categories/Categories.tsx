@@ -17,11 +17,11 @@ const Categories = () => {
           flexDirection: "row",
           paddingBottom: "1rem",
           gap: "2.5rem",
-          overflowX: "hidden",
+          overflowX: "auto",
           overflowY: "hidden",
-          ":hover": {
-            overflowX: "auto",
-          },
+          // ":hover": {
+          //   overflowX: "auto",
+          // },
         }}
       >
         {categories.map((category) => (
