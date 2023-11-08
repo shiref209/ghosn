@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { AiOutlineDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { categories } from "../../../Helpers/categories-data";
 
 const CustomTextfield = styled(TextField)({});
 
@@ -31,7 +32,7 @@ const NavigationBar = () => {
           width: `${matches ? "20%" : "10%"}`,
         }}
       >
-        <Link to="/all-categories">
+        <Link to="/categories">
           <Button
             sx={{
               color: "#A9291F",
@@ -85,23 +86,23 @@ const NavigationBar = () => {
           flexDirection: "row",
           gap: "1rem",
           color: "#656565",
-          "@media (max-width: 1024px)": {
-            "& > :nth-child(n+5)": {
+          "@media (max-width: 1424px)": {
+            "& > :nth-of-type(n+5)": {
               display: "none",
             },
           },
           "@media (max-width: 800px)": {
-            "& > :nth-child(n+4)": {
+            "& > :nth-of-type(n+4)": {
               display: "none",
             },
           },
         }}
       >
-        <Typography variant="body2">البقالة</Typography>
-        <Typography variant="body2">فواكه وخضروات</Typography>
-        <Typography variant="body2">المشروبات</Typography>
-        <Typography variant="body2">الجمال والعناية الشخصية</Typography>
-        <Typography variant="body2">منتجات الأطفال</Typography>
+        {categories.map((category) => (
+          <Link to={`/categories/${category.alt}`} key={category.id}>
+            <Typography variant="body2">{category.title}</Typography>
+          </Link>
+        ))}
       </Box>
 
       {/* user login */}

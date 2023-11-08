@@ -3,11 +3,14 @@ import React from "react";
 import NavBar from "../../Blocks/NavBar/NavBar";
 import Categories from "../../Blocks/Categories/Categories";
 import AllCategoriesSection from "../../Blocks/AllCategoriesSection/AllCategoriesSection";
+import Footer from "../../Blocks/Footer/Footer";
+import PageLayout from "../../Components/UI/PageLayout/PageLayout";
 
 const AllCategories = () => {
   return (
-    <Box>
-      <NavBar />
+    // <Box>
+    //   <NavBar />
+    <PageLayout>
       <Stack direction="column" gap="3rem">
         {/* Categories */}
         <Categories />
@@ -16,7 +19,9 @@ const AllCategories = () => {
         {/* Just arrived */}
         <AllCategoriesSection title="وصل حديثًا" />
       </Stack>
-    </Box>
+    </PageLayout>
+    //   <Footer />
+    // </Box>
   );
 };
 

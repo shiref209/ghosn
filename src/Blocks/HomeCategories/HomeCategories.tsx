@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import CustomDivider from "../../Components/UI/CustomDivider/CustomDivider";
-import { categories } from "./categories-data";
+import { categories } from "../../Helpers/categories-data";
 import CategoryItem from "../../Components/HomeCategoryItem/HomeCategoryItem";
 
 const HomeCategories = () => {

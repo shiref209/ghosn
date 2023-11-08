@@ -10,6 +10,7 @@ import Register from "../Pages/Register/Register";
 
 import React from "react";
 import AllCategories from "../Pages/AllCategories/AllCategories";
+import CategoryPage from "../Pages/CategoryPage/CategoryPage";
 
 const AppRoutes = () => {
   return (
@@ -17,7 +18,8 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/all-categories" element={<AllCategories />} />
+      <Route path="/categories" element={<AllCategories />} />
+      <Route path="/categories/:id" element={<CategoryPage />} />
     </Routes>
   );
 };

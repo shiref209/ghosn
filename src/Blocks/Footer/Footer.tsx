@@ -8,7 +8,9 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#536B2F", padding: "2rem 0" }}>
+    <Box
+      sx={{ backgroundColor: "#536B2F", padding: "2rem 0", marginTop: "1rem" }}
+    >
       <Stack
         direction={"column"}
         justifyContent={"space-between"}

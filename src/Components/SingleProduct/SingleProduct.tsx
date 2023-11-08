@@ -3,9 +3,9 @@ import React from "react";
 import image from "../../assets/images/tea.png";
 import { CustomButton } from "../UI/CustomButton/CustomButton";
 import { BsHeart } from "react-icons/bs";
-type Props = {};
+type Props = { width?: string };
 
-const SingleProduct = (props: Props) => {
+const SingleProduct = ({ width }: Props) => {
   return (
     <Box
       sx={{
@@ -15,7 +15,7 @@ const SingleProduct = (props: Props) => {
         gap: "1rem",
         border: "1px solid rgba(101, 101, 101, 0.60)",
         borderRadius: "10px",
-        width: { xs: "100%", bsm: "85%", md: "33%" },
+        width: { xs: "100%", bsm: "85%", md: `${width ? "100%" : "33%"}` },
       }}
     >
       {/* product image */}

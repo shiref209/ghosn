@@ -1,7 +1,7 @@
 import React from "react";
 import SectionLayout from "../../Components/UI/SectionLayout/SectionLayout";
 import { Typography, Box, Divider } from "@mui/material";
-import { categories } from "../HomeCategories/categories-data";
+import { categories } from "../../Helpers/categories-data";
 import CategoryItem from "../../Components/HomeCategoryItem/HomeCategoryItem";
 
 const Categories = () => {

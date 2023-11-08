@@ -1,11 +1,11 @@
-import groceryImg from "../../assets/images/categories/grocery.png";
-import drinksImg from "../../assets/images/categories/drinks.png";
-import dryfoodImg from "../../assets/images/categories/dry-food.png";
-import fruitsImg from "../../assets/images/categories/fruits.png";
-import electronicsImg from "../../assets/images/categories/electronics.png";
-import skincareImg from "../../assets/images/categories/skin-care.png";
-import kidsImg from "../../assets/images/categories/kids.png";
-import libraryImg from "../../assets/images/categories/library.png";
+import groceryImg from "../assets/images/categories/grocery.png";
+import drinksImg from "../assets/images/categories/drinks.png";
+import dryfoodImg from "../assets/images/categories/dry-food.png";
+import fruitsImg from "../assets/images/categories/fruits.png";
+import electronicsImg from "../assets/images/categories/electronics.png";
+import skincareImg from "../assets/images/categories/skin-care.png";
+import kidsImg from "../assets/images/categories/kids.png";
+import libraryImg from "../assets/images/categories/library.png";
 
 export const categories = [
   {
@@ -48,7 +48,7 @@ export const categories = [
     id: 7,
     title: "أدوات مكتبية",
     img: libraryImg,
-    alt: "dryfood",
+    alt: "office-supplies",
   },
   {
     id: 8,
