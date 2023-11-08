@@ -1,12 +1,16 @@
 import { Box, Button, useTheme, FilledInput } from "@mui/material";
 import { AiOutlineSearch } from "react-icons/ai";
 
-const SearchBar = () => {
+type Props = {
+  isDrawer?: boolean;
+};
+
+const SearchBar = ({ isDrawer }: Props) => {
   const theme = useTheme();
   return (
     <Box
       sx={{
-        width: "25%",
+        width: `${isDrawer ? "100%" : "25%"}`,
         height: "40px",
         display: "flex",
         direction: "row",

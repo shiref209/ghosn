@@ -13,9 +13,9 @@ const Footer = () => {
         direction={"column"}
         justifyContent={"space-between"}
         alignItems={"flex-start"}
-        padding={"1rem 5rem 0"}
-        margin="3rem 0 0"
-        gap="5rem"
+        padding={{ xs: "1rem 1rem 0", md: "1rem 5rem 0" }}
+        marginTop={{ xs: "1rem", bsm: "3rem " }}
+        gap={{ xs: "3rem", bsm: "5rem" }}
         color="#fff"
         sx={{
           "& button": {
@@ -30,18 +30,21 @@ const Footer = () => {
       >
         <Box
           display="flex"
-          flexDirection="row"
+          flexDirection={{ xs: "column", bsm: "row" }}
           width="100%"
           justifyContent="space-between"
+          // gap={{ xs: "3rem", md: "10rem", lg: "20rem" }}
+          gap={{ xs: "3rem", bsm: "5%", md: "20%" }}
         >
           {/* Right Section */}
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
-              gap: "9rem",
+              justifyContent: { xs: "space-around", md: "space-between" },
+              // gap: "9rem",
               alignItems: "flex-start",
+              width: { xs: "100%", bsm: "50%" },
             }}
           >
             <MainLogo color="#FFF" />
@@ -63,7 +66,10 @@ const Footer = () => {
             sx={{
               display: "flex",
               flexDirection: "row",
-              gap: { md: "10rem", lg: "15rem" },
+              justifyContent: { xs: "space-around", md: "space-between" },
+
+              // gap: { md: "10rem", lg: "15rem" },
+              width: { xs: "100%", bsm: "50%" },
             }}
           >
             {/* Customer Service */}

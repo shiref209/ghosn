@@ -9,6 +9,7 @@ body {
       sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: scroll !important;
 }
 a {
   text-decoration: none;
@@ -20,6 +21,7 @@ code {
 }
 /* hide scrollbar */
 ::-webkit-scrollbar {
+  height: 10px;
   width: 5px; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }

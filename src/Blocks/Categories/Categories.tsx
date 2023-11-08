@@ -15,9 +15,13 @@ const Categories = () => {
         sx={{
           display: "flex",
           flexDirection: "row",
+          paddingBottom: "1rem",
           gap: "2.5rem",
-          overflowX: "auto",
+          overflowX: "hidden",
           overflowY: "hidden",
+          ":hover": {
+            overflowX: "auto",
+          },
         }}
       >
         {categories.map((category) => (

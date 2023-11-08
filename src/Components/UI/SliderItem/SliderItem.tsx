@@ -47,7 +47,7 @@ const SliderItem = () => {
         <Typography variant="h2" lineHeight="4rem">
           بخصومات تصل ل
           <Typography
-            variant="h2"
+            fontSize="40px"
             color="#E5C72E"
             lineHeight="0"
             display="inline"

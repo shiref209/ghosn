@@ -28,6 +28,7 @@ const SingleProduct = (props: Props) => {
         <Box
           sx={{
             position: "absolute",
+            color: "#A9291F",
             top: "1rem",
             left: "1rem",
             backgroundColor: "#fff",

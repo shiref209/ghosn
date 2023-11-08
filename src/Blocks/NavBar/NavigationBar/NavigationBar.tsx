@@ -7,6 +7,7 @@ import {
   Button,
   Divider,
   styled,
+  useMediaQuery,
 } from "@mui/material";
 import { AiOutlineDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -14,10 +15,12 @@ import { Link } from "react-router-dom";
 const CustomTextfield = styled(TextField)({});
 
 const NavigationBar = () => {
+  // check screen width by mui query
+  const matches = useMediaQuery("(max-width:700px)");
   return (
     <Stack
       direction={"row"}
-      justifyContent={"space-between"}
+      justifyContent={matches ? "space-around" : "space-between"}
       alignItems={"center"}
       padding={{ bsm: "20px 3rem", md: "20px 5rem" }}
     >
@@ -25,7 +28,7 @@ const NavigationBar = () => {
       <Box
         sx={{
           display: "flex",
-          width: "10%",
+          width: `${matches ? "20%" : "10%"}`,
         }}
       >
         <Link to="/all-categories">
@@ -102,9 +105,10 @@ const NavigationBar = () => {
       </Box>
 
       {/* user login */}
+
       <Box
         sx={{
-          display: "flex",
+          display: `${matches ? "none" : "flex"} `,
           flexDirection: "row",
           gap: "5px",
           color: "#476A11",

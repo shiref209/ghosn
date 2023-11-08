@@ -1,25 +1,32 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Box, useMediaQuery } from "@mui/material";
 import { GoPerson } from "react-icons/go";
 import SearchBar from "../../../Components/SearchBar/SearchBar";
 import MainLogo from "../../../Components/MainLogo/MainLogo";
 import { BsHeart } from "react-icons/bs";
 import { SlHandbag } from "react-icons/sl";
+import { CgMenuRound } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
-const HeadBar = () => {
+type Props = {
+  setDrawerOpen: (open: boolean) => void;
+};
+
+const HeadBar = ({ setDrawerOpen }: Props) => {
+  // check screen width by mui query
+  const matches = useMediaQuery("(max-width:600px)");
   return (
     <Stack
       direction={"row"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      padding={{ bsm: "1rem 3rem", md: "1rem 5rem" }}
+      padding={{ xs: "1rem 3rem", md: "1rem 5rem" }}
     >
       {/* Logo */}
       <Link to="/">
         <MainLogo color="#536B2F" />
       </Link>
       {/* Search Bar */}
-      <SearchBar />
+      {!matches && <SearchBar />}
       {/* Icons */}
       <Box
         sx={{
@@ -30,10 +37,16 @@ const HeadBar = () => {
           color: "#476A11",
         }}
       >
-        <GoPerson />
+        {matches ? (
+          <CgMenuRound fontSize={"2rem"} onClick={() => setDrawerOpen(true)} />
+        ) : (
+          <>
+            <GoPerson />
 
-        <BsHeart />
-        <SlHandbag />
+            <BsHeart />
+            <SlHandbag />
+          </>
+        )}
       </Box>
     </Stack>
   );
