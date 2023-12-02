@@ -100,6 +100,7 @@ const Footer = () => {
               <Typography
                 sx={{
                   marginRight: "0px",
+                  textAlign: { xs: "center", bsm: "unset" },
                 }}
               >
                 تابعنا على

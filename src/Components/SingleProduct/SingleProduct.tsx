@@ -3,6 +3,9 @@ import React from "react";
 import image from "../../assets/images/tea.png";
 import { CustomButton } from "../UI/CustomButton/CustomButton";
 import { BsHeart } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
+import { SlHandbag } from "react-icons/sl";
+
 type Props = { width?: string };
 
 const SingleProduct = ({ width }: Props) => {
@@ -28,19 +31,18 @@ const SingleProduct = ({ width }: Props) => {
         <Box
           sx={{
             position: "absolute",
-            color: "#A9291F",
-            top: "1rem",
-            left: "1rem",
-            backgroundColor: "#fff",
-            height: "2rem",
-            width: "2rem",
+            top: "1.5rem",
+            left: "2.5rem",
+            backgroundColor: "#F9F9F9",
+            height: "1.5rem",
+            width: "1.5rem",
             borderRadius: "50%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <BsHeart />
+          <BsHeart color="#A9291F" />
         </Box>
         <img src={image} alt="" width="100%" />
 
@@ -58,63 +60,95 @@ const SingleProduct = ({ width }: Props) => {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "#D8D8F3",
-            color: "#656565",
+            color: "rgba(121, 76, 72, 0.78)",
           }}
         >
           <Typography variant="body1" fontWeight="400" fontFamily="Cairo">
-            مشروبات
+            بقالة
           </Typography>
         </Box>
       </Box>
       {/* product info */}
       <Box padding="0 1rem">
-        <Typography variant="h5" fontWeight="400" fontFamily="Cairo">
-          صلصة طماطم الوادي
-        </Typography>
         <Typography
-          variant="h6"
-          fontSize="18px"
-          fontWeight="400"
-          fontFamily="Noto Sans Arabic"
+          variant="h5"
+          fontWeight="600"
+          fontFamily="Cairo"
+          color="#121212"
         >
-          20 جنيه
+          اسم المنتج المعروض{" "}
         </Typography>
-        <Typography
-          variant="h6"
-          fontSize="18px"
-          fontWeight="300"
-          fontFamily="Noto Sans Arabic"
-          display={"inline-flex"}
-        >
-          بدلا من 30 جنيه
-        </Typography>
+        {/* Price before and after */}
+        <Box mt="1rem">
+          <Typography
+            variant="body2"
+            fontWeight="400"
+            fontFamily="Noto Sans Arabic"
+            display={"inline"}
+            color={"#396402"}
+            sx={{ fontWeight: "700" }}
+          >
+            30.00 جنيه
+          </Typography>
+          <Typography
+            variant="body2"
+            fontWeight="300"
+            fontFamily="Noto Sans Arabic"
+            color="#656565"
+            display={"inline"}
+            margin="0 10px"
+            sx={{
+              textDecorationLine: "line-through",
+            }}
+          >
+            50.5 جنيه
+          </Typography>
+        </Box>
         {/* Discount Percentage */}
         <Box
           sx={{
-            height: "30px",
-            width: "40px",
-            backgroundColor: "rgba(255, 220, 197, 1)",
+            backgroundColor: "rgba(253, 247, 240, 0.72)",
             display: "inline-flex",
-            marginLeft: "1rem",
+            alignItems: "center",
+            borderRadius: "4px",
+            mt: "0.5rem",
           }}
         >
           <Typography
-            variant="h6"
+            variant="body1"
             fontSize="16px"
-            fontWeight="400"
+            fontWeight="500"
             fontFamily="Noto Sans Arabic"
-            color="rgba(186, 26, 26, 1)"
+            color="#121212"
             textAlign="center"
           >
-            10%-
+            4.5
           </Typography>
+          {/* Star icon */}
+          <Box>
+            <FaStar color="#FFD70D" size={24} />
+          </Box>
         </Box>
       </Box>
       {/* add to cart */}
       <CustomButton
-        sx={{ margin: "2rem 0", width: "70%", alignSelf: "center" }}
+        sx={{
+          margin: "2rem ",
+          width: "90%",
+          alignSelf: "center",
+          boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+          fontWeight: "700",
+        }}
       >
-        أضف لعربة التسوق
+        إضافة لعربة التسوق
+        <Box
+          ml={"1rem"}
+          sx={{
+            display: "flex",
+          }}
+        >
+          <SlHandbag size={20} />
+        </Box>
       </CustomButton>
     </Box>
   );

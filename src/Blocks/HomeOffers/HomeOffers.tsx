@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import CustomDivider from "../../Components/UI/CustomDivider/CustomDivider";
-import SingleOffer from "../../Components/SingleOffer/SingleOffer";
+import SecondarySingleProduct from "../../Components/SecondarySingleProduct/SecondarySingleProduct";
 
 const HomeOffers = () => {
   return (
@@ -35,9 +35,9 @@ const HomeOffers = () => {
           alignItems: "center",
         }}
       >
-        <SingleOffer />
-        <SingleOffer />
-        <SingleOffer />
+        <SecondarySingleProduct />
+        <SecondarySingleProduct />
+        <SecondarySingleProduct />
       </Box>
     </>
   );
