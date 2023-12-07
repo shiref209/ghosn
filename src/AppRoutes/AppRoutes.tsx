@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import React from "react";
 import AllCategories from "../Pages/AllCategories/AllCategories";
 import CategoryPage from "../Pages/CategoryPage/CategoryPage";
+import SingleProductPage from "../Pages/SingleProduct/SingleProductPage";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/categories" element={<AllCategories />} />
       <Route path="/categories/:id" element={<CategoryPage />} />
+      <Route path="/product/:id" element={<SingleProductPage />} />
     </Routes>
   );
 };

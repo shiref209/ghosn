@@ -9,7 +9,7 @@ type Props = {
   id: number;
 };
 
-const HomeCategoryItem = ({ img, title, alt, id }: Props) => {
+const CategoryItem = ({ img, title, alt, id }: Props) => {
   return (
     <Link to={`/categories/${alt}`}>
       <Box
@@ -42,4 +42,4 @@ const HomeCategoryItem = ({ img, title, alt, id }: Props) => {
   );
 };
 
-export default HomeCategoryItem;
+export default CategoryItem;
