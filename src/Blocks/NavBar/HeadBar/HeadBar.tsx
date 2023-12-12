@@ -41,10 +41,15 @@ const HeadBar = ({ setDrawerOpen }: Props) => {
           <CgMenuRound fontSize={"2rem"} onClick={() => setDrawerOpen(true)} />
         ) : (
           <>
-            <GoPerson />
-
-            <BsHeart />
-            <SlHandbag />
+            <Link to="/">
+              <GoPerson />
+            </Link>
+            <Link to="/">
+              <BsHeart />
+            </Link>
+            <Link to="/cart">
+              <SlHandbag />
+            </Link>
           </>
         )}
       </Box>
