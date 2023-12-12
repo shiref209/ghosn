@@ -48,7 +48,10 @@ const HeadBar = ({ setDrawerOpen }: Props) => {
               <BsHeart />
             </Link>
             <Link to="/cart">
-              <SlHandbag />
+              {/* //TODO:: add cart items count */}
+              <Box>
+                <SlHandbag />
+              </Box>
             </Link>
           </>
         )}
