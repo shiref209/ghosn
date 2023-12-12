@@ -28,7 +28,7 @@ const CartSummary = () => {
             justifyContent="space-between"
           >
             <Typography>السعر :</Typography>
-            <Typography fontWeight={"600"}>18 جنيه</Typography>
+            <Typography fontWeight="600">18 جنيه</Typography>
           </Box>
           {/* shipping */}
           <Box
@@ -37,7 +37,7 @@ const CartSummary = () => {
             justifyContent="space-between"
           >
             <Typography>مصاريف الشحن :</Typography>
-            <Typography fontWeight={"600"}>18 جنيه</Typography>
+            <Typography fontWeight="600">18 جنيه</Typography>
           </Box>
           {/* total */}
           <Box
@@ -46,7 +46,7 @@ const CartSummary = () => {
             justifyContent="space-between"
           >
             <Typography>الإجمالي :</Typography>
-            <Typography fontWeight={"600"}>18 جنيه</Typography>
+            <Typography fontWeight="600">18 جنيه</Typography>
           </Box>
         </Box>
       </Box>
