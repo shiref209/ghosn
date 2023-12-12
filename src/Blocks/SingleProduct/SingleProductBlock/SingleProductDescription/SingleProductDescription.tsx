@@ -14,7 +14,7 @@ const SingleProductDescription = () => {
         فشار أبو عوف بالكراميل والقرفة 100 جرام
       </Typography>
       {/* reviews number */}
-      <Box color="rgb(235 214 33 / 89%)">
+      <Box color="#FFD70D">
         <FaStar />
         <FaStar />
         <FaStar />

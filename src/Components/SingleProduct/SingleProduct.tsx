@@ -18,6 +18,7 @@ const SingleProduct = ({ width }: Props) => {
         border: "1px solid rgba(101, 101, 101, 0.60)",
         borderRadius: "10px",
         width: { xs: "100%", bsm: "85%", md: `${width ? "100%" : "33%"}` },
+        boxShadow: "0px 0px 4px 4px rgba(226, 231, 217, 0.25)",
       }}
     >
       <Link to="/product/1">

@@ -24,6 +24,7 @@ const NavigationBar = () => {
       justifyContent={matches ? "space-around" : "space-between"}
       alignItems={"center"}
       padding={{ bsm: "20px 3rem", md: "20px 5rem" }}
+      boxShadow={"0px 0px 4px 4px rgba(226, 231, 217, 0.25)"}
     >
       {/* filter menu */}
       <Box

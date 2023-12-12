@@ -6,7 +6,7 @@ const SectionLayout = (props: any) => {
       justifyContent={"space-between"}
       // alignItems={"center"}
       padding={{ xs: "0 3rem", bsm: "0 5rem" }}
-      marginTop={{ xs: "3rem ", lg: "8rem " }}
+      marginTop={"3rem"}
       gap={{ xs: "3rem", md: "5rem" }}
     >
       {props.children}
